@@ -4,6 +4,7 @@ def find_min_in_nested_arrays(src)
 row_index = 0
 while row_index < src.count do
   element_index = 0
+  binding.pry
   smallest_numbers = src[0]
   while element_index < src[row_index].count do
     if src[row_index][element_index].length > smallest_numbers.length
@@ -11,4 +12,9 @@ while row_index < src.count do
     end
     element_index += 1
   end
-smallest_numbers
+  outer_results << smallest_numbers
+  row_index += 1
+end
+ 
+outer_results
+end
